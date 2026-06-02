@@ -28,13 +28,13 @@
                     },
                     colors: {
                         brand: {
-                            50: '#f0fdfa',  /* 민트색 연한 배경 */
+                            50: '#f0fdfa',
                             100: '#ccfbf1',
                             200: '#99f6e4',
-                            500: '#14b8a6',  /* 메인 민트 시그니처 */
+                            500: '#14b8a6',
                             600: '#0d9488',
                             700: '#0f766e',
-                            900: '#115e59',  /* 딥 민트 */
+                            900: '#115e59',
                         },
                         warm: {
                             50: '#fafaf9',
@@ -79,15 +79,20 @@
         html {
             scroll-behavior: smooth;
         }
+        /* 단어 단위 줄바꿈을 지정하여 가독성을 높이는 핵심 스타일 */
+        .keep-all {
+            word-break: keep-all;
+            overflow-wrap: break-word;
+        }
     </style>
 </head>
 <body class="bg-warm-50 text-slate-800 antialiased font-bold selection:bg-brand-200">
 
-    <!-- 인트로 프리로더: 퍼포먼스 마케터 강조 -->
+    <!-- 인트로 프리로더 -->
     <div id="preloader" class="fixed inset-0 bg-brand-900 z-[9999] flex flex-col items-center justify-center text-center px-4">
         <div class="space-y-4">
             <h2 class="font-display text-brand-100 text-2xl tracking-widest uppercase animate-pulse font-extrabold">PERFORMANCE MARKETER PORTFOLIO</h2>
-            <div class="text-white text-3xl font-black h-12" id="typed-text"></div>
+            <div class="text-white text-3xl font-black h-12 keep-all" id="typed-text"></div>
             <div class="w-48 h-1 bg-brand-700 rounded-full mx-auto overflow-hidden mt-4">
                 <div class="w-full h-full bg-brand-200 origin-left animate-[loading_2s_ease-in-out_infinite]"></div>
             </div>
@@ -107,11 +112,11 @@
         <div class="absolute top-1/2 -right-20 w-[30rem] h-[30rem] bg-teal-100 rounded-full filter blur-[120px] opacity-30 animate-float" style="animation-delay: -3s;"></div>
     </div>
 
-    <!-- 📌 상단 배너 배정: 퍼포먼스 마케터 타이틀 명시 -->
+    <!-- 📌 상단 배너: 인하공업전문대학으로 텍스트 전면 수정 -->
     <header class="fixed top-0 w-full bg-warm-50/80 backdrop-blur-md border-b border-brand-100 z-50 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <a href="#" class="font-display text-2xl font-black text-brand-700 tracking-tight">AYOUNG.LOG</a>
+                <a href="#" class="font-sans text-xl md:text-2xl font-black text-brand-700 tracking-tight">인하공업전문대학</a>
                 <span class="hidden sm:inline-block bg-brand-100 text-brand-700 text-xs font-black px-2.5 py-1 rounded-md border border-brand-200">PERFORMANCE MARKETER</span>
             </div>
             <nav class="hidden md:flex items-center space-gap gap-8">
@@ -132,7 +137,7 @@
         </div>
     </header>
 
-    <!-- 메인 히어로 섹션: 숫자의 설득력과 그로스 가치 강조 -->
+    <!-- 메인 히어로 섹션 -->
     <section class="relative min-h-screen pt-24 flex items-center grid-bg overflow-hidden">
         <div class="max-w-6xl mx-auto px-6 py-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -140,10 +145,11 @@
                 <div class="inline-flex items-center gap-2 bg-brand-100 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-sm font-extrabold tracking-wide">
                     📈 DATA-DRIVEN PERFORMANCE MARKETING
                 </div>
-                <h1 class="font-display text-4xl md:text-5xl lg:text-[3.6rem] font-black text-slate-900 leading-[1.15] tracking-tight">
-                    정밀한 <span class="text-brand-600 relative">데이터 분석<span class="absolute bottom-1 left-0 w-full h-3 bg-brand-100 -z-10 rounded-full"></span></span>과 고효율 성과를 도출합니다.
+                <!-- 줄바꿈 깔끔하게 정리 -->
+                <h1 class="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-black text-slate-900 leading-[1.2] tracking-tight keep-all">
+                    정밀한 <span class="text-brand-600 relative">데이터 분석<span class="absolute bottom-1 left-0 w-full h-3 bg-brand-100 -z-10 rounded-full"></span></span>과<br class="hidden md:inline"> 고효율 성과를 도출합니다.
                 </h1>
-                <p class="text-lg md:text-xl text-slate-700 leading-relaxed max-w-xl font-bold">
+                <p class="text-base md:text-lg text-slate-700 leading-relaxed max-w-xl font-bold keep-all">
                     구글애즈와 네이버 키워드 광고의 정밀 타겟팅을 통한 ROAS 최적화는 물론, 고객 유입 여정(Funnel)을 집요하게 분석하여 이탈률을 최소화하는 고효율 성과 지향형 퍼포먼스 마케터 임아영입니다.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-2">
@@ -164,8 +170,8 @@
                         <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center text-brand-500 mb-4 animate-bounce">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                         </div>
-                        <p class="font-display font-black text-slate-800 text-lg">임아영 프로필 영역</p>
-                        <p class="text-xs text-slate-500 font-extrabold mt-2 leading-relaxed mb-4">추후 파일명을 'profile.jpg'로 설정하여<br>저장소에 업로드하면 자동 연동됩니다.</p>
+                        <p class="font-sans font-black text-slate-800 text-lg">임아영 프로필 영역</p>
+                        <p class="text-xs text-slate-500 font-extrabold mt-2 leading-relaxed mb-4 keep-all">추후 파일명을 'profile.jpg'로 설정하여<br>저장소에 업로드하면 자동 연동됩니다.</p>
                         
                         <a href="https://www.inhatc.ac.kr" target="_blank" class="w-full bg-brand-50 hover:bg-brand-100 border border-brand-200 text-brand-700 font-bold text-xs py-2.5 px-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-1.5 shadow-sm group">
                             <span>인하공업전문대학 바로가기</span>
@@ -178,30 +184,30 @@
         </div>
     </section>
 
-    <!-- 스킬셋/역량 영역: 퍼포먼스 마케팅 중심의 고도화 -->
+    <!-- 스킬셋/역량 영역 -->
     <section id="about" class="py-24 bg-white border-y border-brand-50 reveal">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
                 <h2 class="font-display text-4xl font-black text-slate-900">Performance Marketing Core Skills</h2>
-                <p class="text-slate-600 text-lg font-bold">목표 수치 달성을 위한 데이터 추적 및 퍼포먼스 믹스 설계 역량</p>
+                <p class="text-slate-600 text-lg font-bold keep-all">목표 수치 달성을 위한 데이터 추적 및 퍼포먼스 믹스 설계 역량</p>
                 <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-warm-50 p-8 rounded-3xl border border-brand-100 hover:border-brand-300 transition-all duration-300 hover:shadow-xl group">
                     <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-6 font-display font-black text-2xl group-hover:bg-brand-600 group-hover:text-white transition-colors">01</div>
-                    <h3 class="text-xl font-black text-slate-900 mb-3">미디어 믹스 & ROAS 최적화</h3>
-                    <p class="text-slate-600 leading-relaxed text-base font-bold">구글애즈(Google Ads), 네이버 키워드 및 SA/DA 솔루션을 유기적으로 연계합니다. 타겟 세그먼트 고도화를 통해 불필요한 예산 낭비를 차단하고 전환 효율을 극대화합니다.</p>
+                    <h3 class="text-xl font-black text-slate-900 mb-3 keep-all">미디어 믹스 & ROAS 최적화</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base font-bold keep-all">구글애즈(Google Ads), 네이버 키워드 및 SA/DA 솔루션을 유기적으로 연계합니다. 타겟 세그먼트 고도화를 통해 불필요한 예산 낭비를 차단하고 전환 효율을 극대화합니다.</p>
                 </div>
                 <div class="bg-warm-50 p-8 rounded-3xl border border-brand-100 hover:border-brand-300 transition-all duration-300 hover:shadow-xl group">
                     <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-6 font-display font-black text-2xl group-hover:bg-brand-600 group-hover:text-white transition-colors">02</div>
-                    <h3 class="text-xl font-black text-slate-900 mb-3">데이터 기반의 퍼널 분석</h3>
-                    <p class="text-slate-600 leading-relaxed text-base font-bold">클릭률(CTR), 전환율(CVR), 획득비용(CAC) 등 마케팅 핵심 핵심 지표를 계량화하여 추적합니다. 고객의 웹내 행동 패턴을 확인하여 막힌 구간의 이탈 원인을 진단합니다.</p>
+                    <h3 class="text-xl font-black text-slate-900 mb-3 keep-all">데이터 기반의 퍼널 분석</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base font-bold keep-all">클릭률(CTR), 전환율(CVR), 획득비용(CAC) 등 마케팅 핵심 지표를 계량화하여 추적합니다. 고객의 웹내 행동 패턴을 확인하여 막힌 구간의 이탈 원인을 진단합니다.</p>
                 </div>
                 <div class="bg-warm-50 p-8 rounded-3xl border border-brand-100 hover:border-brand-300 transition-all duration-300 hover:shadow-xl group">
                     <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-6 font-display font-black text-2xl group-hover:bg-brand-600 group-hover:text-white transition-colors">03</div>
-                    <h3 class="text-xl font-black text-slate-900 mb-3">고효율 크리에이티브 기획</h3>
-                    <p class="text-slate-600 leading-relaxed text-base font-bold">A/B 테스트에 최적화된 소재 비주얼을 설계합니다. 피그마 및 어도비 툴에 대한 높은 이해도를 바탕으로 CTR을 리드할 수 있는 최적의 광고 레이아웃 구조를 도출해냅니다.</p>
+                    <h3 class="text-xl font-black text-slate-900 mb-3 keep-all">고효율 크리에이티브 기획</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base font-bold keep-all">A/B 테스트에 최적화된 소재 비주얼을 설계합니다. 피그마 및 어도비 툴에 대한 높은 이해도를 바탕으로 CTR을 리드할 수 있는 최적의 광고 레이아웃 구조를 도출해냅니다.</p>
                 </div>
             </div>
         </div>
@@ -212,13 +218,13 @@
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
                 <h2 class="font-display text-4xl font-black text-slate-900">Paid Media ROI Simulator</h2>
-                <p class="text-slate-600 text-lg font-bold">집행 예산과 매체 타겟팅 효율 설정에 따른 예상 성과 시뮬레이션 지표</p>
+                <p class="text-slate-600 text-lg font-bold keep-all">집행 예산과 매체 타겟팅 효율 설정에 따른 예상 성과 시뮬레이션 지표</p>
             </div>
 
             <div class="bg-white border border-brand-100 rounded-[2.5rem] shadow-xl p-8 md:p-12">
                 <div class="space-y-8">
                     <div>
-                        <label class="block text-slate-800 font-black mb-3 text-lg flex justify-between">
+                        <label class="block text-slate-800 font-black mb-3 text-lg flex justify-between items-center">
                             <span>월간 마케팅 집행 예산 설정</span>
                             <span class="text-brand-600 font-display font-black text-xl" id="budget-value">5,000,000원</span>
                         </label>
@@ -227,16 +233,16 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-slate-800 font-black mb-2">평균 클릭당 비용 (CPC)</label>
-                            <select id="cpc-select" class="w-full bg-warm-50 border border-brand-200 rounded-xl p-4 text-slate-800 font-bold focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                            <label class="block text-slate-800 font-black mb-2 text-sm md:text-base">평균 클릭당 비용 (CPC)</label>
+                            <select id="cpc-select" class="w-full bg-warm-50 border border-brand-200 rounded-xl p-4 text-slate-800 font-bold focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm md:text-base">
                                 <option value="250">네이버 브랜드검색 최적 지표 (낮은 CPC: 250원)</option>
                                 <option value="600" selected>일반 경쟁 키워드 매칭 기준 (보통 CPC: 600원)</option>
                                 <option value="1500">구글 실시간 입찰 타겟 디스플레이 (높은 CPC: 1,500원)</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-slate-800 font-black mb-2">예상 전환율 (CVR)</label>
-                            <select id="cvr-select" class="w-full bg-warm-50 border border-brand-200 rounded-xl p-4 text-slate-800 font-bold focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                            <label class="block text-slate-800 font-black mb-2 text-sm md:text-base">예상 전환율 (CVR)</label>
+                            <select id="cvr-select" class="w-full bg-warm-50 border border-brand-200 rounded-xl p-4 text-slate-800 font-bold focus:ring-2 focus:ring-brand-500 focus:outline-none text-sm md:text-base">
                                 <option value="0.01">일반 트래픽 노출 위주 세팅 (1%)</option>
                                 <option value="0.025" selected>상세 타겟 믹스 및 랜딩 최적화 기획 (2.5%)</option>
                                 <option value="0.05">초정밀 리타겟팅 오디언스 추출 기획 (5%)</option>
@@ -246,15 +252,15 @@
 
                     <div class="bg-brand-900 rounded-3xl p-6 md:p-8 text-white grid grid-cols-1 sm:grid-cols-3 gap-6 text-center relative overflow-hidden">
                         <div class="space-y-1 z-10">
-                            <p class="text-brand-100 text-sm font-bold">예상 트래픽 유입수 (Clicks)</p>
+                            <p class="text-brand-100 text-xs md:text-sm font-bold">예상 트래픽 유입수 (Clicks)</p>
                             <p class="font-display text-2xl md:text-3xl font-black text-white" id="res-clicks">0건</p>
                         </div>
                         <div class="space-y-1 z-10 border-y sm:border-y-0 sm:border-x border-brand-700/60 py-4 sm:py-0">
-                            <p class="text-brand-100 text-sm font-bold">예상 볼륨 전환수 (Conversion)</p>
+                            <p class="text-brand-100 text-xs md:text-sm font-bold">예상 볼륨 전환수 (Conversion)</p>
                             <p class="font-display text-2xl md:text-3xl font-black text-white" id="res-conversions">0건</p>
                         </div>
                         <div class="space-y-1 z-10">
-                            <p class="text-brand-100 text-sm font-bold">목표 달성 지표 리포트</p>
+                            <p class="text-brand-100 text-xs md:text-sm font-bold">목표 달성 지표 리포트</p>
                             <button onclick="showReportToast()" class="mt-1 inline-flex items-center text-xs bg-brand-700 hover:bg-brand-600 text-brand-100 font-black px-3 py-1.5 rounded-xl transition-colors">데이터 분석</button>
                         </div>
                     </div>
@@ -263,12 +269,12 @@
         </div>
     </section>
 
-    <!-- 프로젝트 영역: 성과 및 캠페인 중심 수식화 -->
+    <!-- 프로젝트 영역 -->
     <section id="projects" class="py-24 bg-white reveal">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
                 <h2 class="font-display text-4xl font-black text-slate-900">Growth & Performance Campaigns</h2>
-                <p class="text-slate-600 text-lg font-bold">명확한 데이터 설득력으로 비즈니스 그로스를 이끈 실무 프로젝트 리스트</p>
+                <p class="text-slate-600 text-lg font-bold keep-all">명확한 데이터 설득력으로 비즈니스 그로스를 이끈 실무 프로젝트 리스트</p>
                 <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
             </div>
 
@@ -283,8 +289,8 @@
                                 <span class="bg-brand-600 text-white text-xs font-black px-2.5 py-1 rounded-md">ROAS 개선</span>
                                 <span class="bg-slate-200 text-slate-800 text-xs font-black px-2.5 py-1 rounded-md">네이버 파워링크</span>
                             </div>
-                            <h3 class="text-xl font-black text-slate-900 group-hover:text-brand-600 transition-colors">로컬 인프라 연계 검색광고 매칭 효율 극대화 캠페인</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed font-bold">구글애즈 정밀 잠재고객 세그먼트와 네이버 키워드 매칭 가중치를 결합하여 예산 누수를 최소화하고, 타겟 지역 내 유효 클릭 유입률 및 리드 획득 성과를 유의미하게 성장시킨 핵심 퍼포먼스 기획안입니다.</p>
+                            <h3 class="text-lg md:text-xl font-black text-slate-900 group-hover:text-brand-600 transition-colors keep-all">로컬 인프라 연계 검색광고 매칭 효율 극대화 캠페인</h3>
+                            <p class="text-slate-600 text-xs md:text-sm leading-relaxed font-bold keep-all">구글애즈 정밀 잠재고객 세그먼트와 네이버 키워드 매칭 가중치를 결합하여 예산 누수를 최소화하고, 타겟 지역 내 유효 클릭 유입률 및 리드 획득 성과를 유의미하게 성장시킨 핵심 퍼포먼스 기획안입니다.</p>
                         </div>
                     </div>
                 </article>
@@ -299,8 +305,8 @@
                                 <span class="bg-teal-100 text-teal-700 text-xs font-black px-2.5 py-1 rounded-md">CTR 개선</span>
                                 <span class="bg-slate-200 text-slate-800 text-xs font-black px-2.5 py-1 rounded-md">배너 A/B 테스트</span>
                             </div>
-                            <h3 class="text-xl font-black text-slate-900 group-hover:text-brand-600 transition-colors">스토리텔링 기반 고효율 광고 크리에이티브 시각화 레이아웃</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed font-bold">인포그래픽과 은유 메타포를 조화시켜 잠재고객의 스크롤 중단율을 높인 배너 시안입니다. 어도비 포토샵 및 애프터이펙트의 제작 구조를 깊게 활용하여 CTR 향상 지표에 부합하도록 정밀 설계되었습니다.</p>
+                            <h3 class="text-lg md:text-xl font-black text-slate-900 group-hover:text-brand-600 transition-colors keep-all">스토리텔링 기반 고효율 광고 크리에이티브 시각화 레이아웃</h3>
+                            <p class="text-slate-600 text-xs md:text-sm leading-relaxed font-bold keep-all">인포그래픽과 은유 메타포를 조화시켜 잠재고객의 스크롤 중단율을 높인 배너 시안입니다. 어도비 포토샵 및 애프터이펙트의 제작 구조를 깊게 활용하여 CTR 향상 지표에 부합하도록 정밀 설계되었습니다.</p>
                         </div>
                     </div>
                 </article>
@@ -315,8 +321,8 @@
                                 <span class="bg-emerald-100 text-emerald-700 text-xs font-black px-2.5 py-1 rounded-md">기획서</span>
                                 <span class="bg-slate-200 text-slate-800 text-xs font-black px-2.5 py-1 rounded-md">Data Pitching</span>
                             </div>
-                            <h3 class="text-xl font-black text-slate-900 group-hover:text-brand-600 transition-colors">데이터 분석 및 시장 타겟 다이렉팅 종합 마케팅 제안서</h3>
-                            <p class="text-slate-600 text-sm leading-relaxed font-bold">공식 시장 트렌드 보고서의 수치 데이터를 추출하여 마케팅 마일스톤에 녹여낸 고득점 피치덱 서식입니다. 논리적 인과관계와 명확한 정량적 통계를 기반으로 클라이언트를 명확히 설득하는 구조를 보여줍니다.</p>
+                            <h3 class="text-lg md:text-xl font-black text-slate-900 group-hover:text-brand-600 transition-colors keep-all">데이터 분석 및 시장 타겟 다이렉팅 종합 마케팅 제안서</h3>
+                            <p class="text-slate-600 text-xs md:text-sm leading-relaxed font-bold keep-all">공식 시장 트렌드 보고서의 수치 데이터를 추출하여 마케팅 마일스톤에 녹여낸 고득점 피치덱 서식입니다. 논리적 인과관계와 명확한 정량적 통계를 기반으로 클라이언트를 명확히 설득하는 구조를 보여줍니다.</p>
                         </div>
                     </div>
                 </article>
@@ -331,12 +337,12 @@
         </div>
         <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
             <h2 class="font-display text-4xl font-black text-white">Let's Drive Growth Together</h2>
-            <p class="text-brand-100 text-lg max-w-xl mx-auto font-bold">
+            <p class="text-brand-100 text-base md:text-lg max-w-xl mx-auto font-bold keep-all">
                 지표 중심의 집요한 분석력과 유연한 크리에이티브 시각을 통해 귀사의 마케팅 파이프라인에 폭발적인 성장의 임팩트를 더하겠습니다.
             </p>
-            <div class="p-6 bg-brand-800/50 backdrop-blur-sm border border-brand-700 rounded-3xl inline-block text-left space-y-3">
-                <p class="flex items-center gap-3 text-brand-100 font-bold"><span class="font-black text-white">Email:</span> im_ayoung@example.com</p>
-                <p class="flex items-center gap-3 text-brand-100 font-bold"><span class="font-black text-white">Location:</span> 인천광역시 (인프라 타겟팅 및 로컬 퍼포먼스 마케팅 특화)</p>
+            <div class="p-6 bg-brand-800/50 backdrop-blur-sm border border-brand-700 rounded-3xl inline-block text-left space-y-3 max-w-full overflow-hidden">
+                <p class="flex flex-wrap items-center gap-x-3 text-brand-100 font-bold text-sm md:text-base keep-all"><span class="font-black text-white">Email:</span> im_ayoung@example.com</p>
+                <p class="flex flex-wrap items-center gap-x-3 text-brand-100 font-bold text-sm md:text-base keep-all"><span class="font-black text-white">Location:</span> 인천광역시 (인프라 타겟팅 및 로컬 퍼포먼스 마케팅 특화)</p>
             </div>
             <div>
                 <a href="mailto:im_ayoung@example.com" class="inline-flex items-center bg-white hover:bg-brand-100 text-brand-900 font-black px-8 py-4 rounded-2xl shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -349,17 +355,17 @@
     <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
         <div class="max-w-6xl mx-auto px-6 text-center space-y-3">
             <p class="font-display text-lg font-black text-slate-300">IM A-YOUNG</p>
-            <p class="text-sm font-bold">&copy; 2026 Im A-young. Performance Marketer Portfolio.</p>
-            <p class="text-xs text-slate-600 font-bold">본 포트폴리오는 시맨틱 웹 표준 규격 및 검색엔진 최적화(SEO) 마크업 가이드에 맞춰 빌드되었습니다.</p>
+            <p class="text-xs md:text-sm font-bold">&copy; 2026 Im A-young. Performance Marketer Portfolio.</p>
+            <p class="text-xs text-slate-600 font-bold keep-all">본 포트폴리오는 시맨틱 웹 표준 규격 및 검색엔진 최적화(SEO) 마크업 가이드에 맞춰 빌드되었습니다.</p>
         </div>
     </footer>
 
-    <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-2xl shadow-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 z-[9999] flex items-center gap-2 font-bold">
+    <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-2xl shadow-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 z-[9999] flex items-center gap-2 font-bold max-w-[90%] keep-all text-sm md:text-base">
         <span class="text-brand-400">●</span> <span id="toast-msg"></span>
     </div>
 
     <script>
-        // 1. 인트로 프리로더 타이핑 액션 코드 - 퍼포먼스 마케팅용 키워드로 변경
+        // 1. 인트로 프리로더 타이핑 액션 코드
         const introWords = ["ROAS Optimization.", "Funnel Analytics.", "Im A-Young."];
         let wordIdx = 0, charIdx = 0, isDeleting = false;
         const typedTarget = document.getElementById('typed-text');
