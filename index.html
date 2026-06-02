@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임아영 | 퍼포먼스 & 콘텐츠 마케팅 기획자 포트폴리오</title>
+    
+    <meta name="description" content="데이터 기반의 퍼포먼스 마케팅과 크리에이티브한 콘텐츠 기획을 아우르는 마케터 임아영입니다. 구글애즈, 네이버광고 집행 및 어도비 툴을 활용한 비주얼 기획 역량을 확인해보세요.">
+    <meta name="keywords" content="임아영, 마케터 포트폴리오, 퍼포먼스 마케팅, 콘텐츠 마케팅, 구글애즈, 네이버광고, 어도비 기획">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="임아영 | 마케팅 기획자 포트폴리오">
+    <meta property="og:description" content="숫자의 설득력과 크리에이티브의 직관성을 하나로, 마케터 임아영입니다.">
+    <meta property="og:image" content="profile.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Gowun+Dodum&family=Nunito:wght@300..900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Gowun Dodum', 'Nunito', 'sans-serif'],
+                        display: ['Fredoka', 'Gowun Dodum', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            900: '#4c1d95',
+                        },
+                        warm: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 8s ease-in-out infinite',
+                        'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+                            '50%': { transform: 'translate(30px, -40px) scale(1.15)' },
+                        },
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '0.2' },
+                            '50%': { opacity: '0.4' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* 미세 격자 패턴 배경 */
+        .grid-bg {
+            background-size: 32px 32px;
+            background-image: linear-gradient(to right, rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(124, 58, 237, 0.03) 1px, transparent 1px);
+        }
+        /* 스크롤 애니메이션을 위한 클래스 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-warm-50 text-slate-800 antialiased font-sans selection:bg-brand-200">
+
+    <div id="preloader" class="fixed inset-0 bg-brand-900 z-[9999] flex flex-col items-center justify-center text-center px-4">
+        <div class="space-y-4">
+            <h2 class="font-display text-brand-100 text-2xl tracking-widest uppercase animate-pulse">MARKETER PORTFOLIO</h2>
+            <div class="text-white text-3xl font-bold h-12" id="typed-text"></div>
+            <div class="w-48 h-1 bg-brand-700 rounded-full mx-auto overflow-hidden mt-4">
+                <div class="w-full h-full bg-brand-200 origin-left animate-[loading_2s_ease-in-out_infinite]"></div>
+            </div>
+        </div>
+    </div>
+    <style>
+        @keyframes loading {
+            0% { transform: scaleX(0); transform-origin: left; }
+            50% { transform: scaleX(1); transform-origin: left; }
+            50.1% { transform: scaleX(1); transform-origin: right; }
+            100% { transform: scaleX(0); transform-origin: right; }
+        }
+    </style>
+
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-200 rounded-full filter blur-[100px] opacity-40 animate-float"></div>
+        <div class="absolute top-1/2 -right-20 w-[30rem] h-[30rem] bg-purple-200 rounded-full filter blur-[120px] opacity-30 animate-float" style="animation-delay: -3s;"></div>
+    </div>
+
+    <header class="fixed top-0 w-full bg-warm-50/80 backdrop-blur-md border-b border-brand-100 z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-display text-2xl font-bold text-brand-700 tracking-tight">AMY.MARKETING</a>
+            <nav class="hidden md:flex items-center space-gap gap-8">
+                <a href="#about" class="nav-link font-medium text-slate-600 hover:text-brand-600 transition-colors relative py-2">소개</a>
+                <a href="#simulator" class="nav-link font-medium text-slate-600 hover:text-brand-600 transition-colors relative py-2">효율 시뮬레이터</a>
+                <a href="#projects" class="nav-link font-medium text-slate-600 hover:text-brand-600 transition-colors relative py-2">프로젝트</a>
+                <a href="#contact" class="nav-link font-medium text-slate-600 hover:text-brand-600 transition-colors relative py-2">문의하기</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden text-slate-700 p-2 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-warm-50 border-b border-brand-100 px-6 py-4 space-y-3 shadow-inner">
+            <a href="#about" class="block font-medium text-slate-600 hover:text-brand-600 py-1">소개</a>
+            <a href="#simulator" class="block font-medium text-slate-600 hover:text-brand-600 py-1">효율 시뮬레이터</a>
+            <a href="#projects" class="block font-medium text-slate-600 hover:text-brand-600 py-1">프로젝트</a>
+            <a href="#contact" class="block font-medium text-slate-600 hover:text-brand-600 py-1">문의하기</a>
+        </div>
+    </header>
+
+    <section class="relative min-h-screen pt-24 flex items-center grid-bg overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 py-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div id="hero-text-container" class="lg:col-span-7 space-y-8 opacity-0 translate-y-8 transition-all duration-1000 delay-300">
+                <div class="inline-flex items-center gap-2 bg-brand-100 border border-brand-200 text-brand-700 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide">
+                    ✨ PERFORMANCE & CONTENT MARKETING
+                </div>
+                <h1 class="font-display text-4xl md:text-5xl lg:text-[3.8rem] font-black text-slate-900 leading-[1.15] tracking-tight">
+                    숫자의 <span class="text-brand-600 relative">설득력<span class="absolute bottom-1 left-0 w-full h-3 bg-brand-100 -z-10 rounded-full"></span></span>과 크리에이티브를 하나로 연결합니다.
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 leading-relaxed max-w-xl font-light">
+                    구글애즈와 네이버 키워드 광고의 정밀한 데이터 타겟팅부터 어도비 프로토타이핑을 통한 직접적인 비주얼 기획, 논리적인 제안서 작성을 아우르는 최적의 비즈니스 퍼포먼스를 설계합니다.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="group bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-brand-500/20 hover:shadow-brand-600/30 transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2 text-lg">
+                        포트폴리오 보기
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                    <a href="#contact" class="bg-white hover:bg-slate-50 text-slate-700 border-2 border-slate-200 hover:border-brand-300 font-bold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 text-lg">
+                        협업 제안하기
+                    </a>
+                </div>
+            </div>
+
+            <div id="hero-img-container" class="lg:col-span-5 flex justify-center opacity-0 scale-95 transition-all duration-1000 delay-500">
+                <div class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-200 to-purple-200 rounded-[2.5rem] rotate-6 transform transition-transform duration-500 hover:rotate-3 shadow-xl"></div>
+                    <div class="absolute inset-0 bg-white rounded-[2.5rem] border-2 border-dashed border-brand-400 m-2 flex flex-col items-center justify-center p-6 text-center shadow-inner overflow-hidden">
+                        <div class="w-16 h-16 bg-brand-50 rounded-full flex items-center justify-center text-brand-500 mb-4 animate-bounce">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        </div>
+                        <p class="font-display font-bold text-slate-700 text-lg">임아영 프로필 영역</p>
+                        <p class="text-xs text-slate-400 mt-2 leading-relaxed">추후 파일명을 'profile.jpg'로 설정하여<br>저장소에 업로드하면 자동 연동됩니다.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white border-y border-brand-50 reveal">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 class="font-display text-4xl font-extrabold text-slate-900">Core Expertise</h2>
+                <p class="text-slate-500 text-lg">기획서 작성부터 미디어 집행, 크리에이티브 시각화까지 가능한 올라운더 마케터</p>
+                <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-warm-50 p-8 rounded-3xl border border-brand-100 hover:border-brand-300 transition-all duration-300 hover:shadow-xl group">
+                    <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-6 font-display font-black text-2xl group-hover:bg-brand-600 group-hover:text-white transition-colors">01</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">퍼포먼스 미디어 믹스</h3>
+                    <p class="text-slate-600 leading-relaxed text-base">구글애즈(Google Ads)와 네이버 키워드 광고 솔루션을 기반으로, 최적의 타겟 세그먼트를 분류하고 효율적인 예산 배배분 시나리오를 구성합니다.</p>
+                </div>
+                <div class="bg-warm-50 p-8 rounded-3xl border border-brand-100 hover:border-brand-300 transition-all duration-300 hover:shadow-xl group">
+                    <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-6 font-display font-black text-2xl group-hover:bg-brand-600 group-hover:text-white transition-colors">02</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">크리에이티브 비주얼 다이렉팅</h3>
+                    <p class="text-slate-600 leading-relaxed text-base">Adobe Photoshop, After Effects 툴 메커니즘을 온전히 이해하여 디자이너와의 커뮤니케이션 비용을 줄이고, 직접 고품질 배너 레이아웃을 기획해냅니다.</p>
+                </div>
+                <div class="bg-warm-50 p-8 rounded-3xl border border-brand-100 hover:border-brand-300 transition-all duration-300 hover:shadow-xl group">
+                    <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mb-6 font-display font-black text-2xl group-hover:bg-brand-600 group-hover:text-white transition-colors">03</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">논리적 오피스 문서 기획</h3>
+                    <p class="text-slate-600 leading-relaxed text-base">비즈니스의 핵심 가치를 관통하는 텍스트와 정형화된 데이터 요약을 토대로, 클라이언트와 유관 부서를 매끄럽게 설득하는 마케팅 제안서를 구축합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="simulator" class="py-24 grid-bg bg-brand-50/30 reveal">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <h2 class="font-display text-4xl font-extrabold text-slate-900">ROI Simulation</h2>
+                <p class="text-slate-500 text-lg">목표 예산 대비 가상 광고 성과 지표를 실시간으로 확인해 보세요.</p>
+            </div>
+
+            <div class="bg-white border border-brand-100 rounded-[2.5rem] shadow-xl p-8 md:p-12">
+                <div class="space-y-8">
+                    <div>
+                        <label class="block text-slate-700 font-bold mb-3 text-lg flex justify-between">
+                            <span>월간 마케팅 집행 예산</span>
+                            <span class="text-brand-600 font-display font-bold text-xl" id="budget-value">5,000,000원</span>
+                        </label>
+                        <input type="range" id="budget-range" min="1000000" max="30000000" step="500000" value="5000000" class="w-full h-2.5 bg-brand-100 rounded-lg appearance-none cursor-pointer accent-brand-600">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-slate-700 font-bold mb-2">평균 클릭당 비용 (CPC)</label>
+                            <select id="cpc-select" class="w-full bg-warm-50 border border-brand-200 rounded-xl p-4 text-slate-700 font-medium focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                                <option value="250">네이버 브랜드검색 지표 수준 (낮은 CPC: 250원)</option>
+                                <option value="600" selected>일반 키워드 매칭 광고 수준 (보통 CPC: 600원)</option>
+                                <option value="1500">구글 디스플레이 경쟁 구간 수준 (높은 CPC: 1,500원)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-slate-700 font-bold mb-2">예상 전환율 (CVR)</label>
+                            <select id="cvr-select" class="w-full bg-warm-50 border border-brand-200 rounded-xl p-4 text-slate-700 font-medium focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                                <option value="0.01">보수적 타겟 레이아웃 기획 (1%)</option>
+                                <option value="0.025" selected>콘텐츠 매력도 최적화 기획 (2.5%)</option>
+                                <option value="0.05">초정밀 오디언스 타겟팅 기획 (5%)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-900 rounded-3xl p-6 md:p-8 text-white grid grid-cols-1 sm:grid-cols-3 gap-6 text-center relative overflow-hidden">
+                        <div class="space-y-1 z-10">
+                            <p class="text-brand-200 text-sm font-medium">예상 노출 유입수</p>
+                            <p class="font-display text-2xl md:text-3xl font-bold text-white" id="res-clicks">0건</p>
+                        </div>
+                        <div class="space-y-1 z-10 border-y sm:border-y-0 sm:border-x border-brand-700/60 py-4 sm:py-0">
+                            <p class="text-brand-200 text-sm font-medium">예상 고객 전환수</p>
+                            <p class="font-display text-2xl md:text-3xl font-bold text-white" id="res-conversions">0건</p>
+                        </div>
+                        <div class="space-y-1 z-10">
+                            <p class="text-brand-200 text-sm font-medium">목표 달성 지표 리포트</p>
+                            <button onclick="showReportToast()" class="mt-1 inline-flex items-center text-xs bg-brand-700 hover:bg-brand-600 text-brand-100 font-bold px-3 py-1.5 rounded-xl transition-colors">데이터 분석</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-white reveal">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 class="font-display text-4xl font-extrabold text-slate-900">Featured Campaigns</h2>
+                <p class="text-slate-500 text-lg">기획과 퍼포먼스를 조화롭게 녹여낸 가치 창출의 기록</p>
+                <div class="w-12 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="group bg-warm-50 rounded-[2rem] border border-brand-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-brand-100 to-purple-100 flex items-center justify-center text-brand-400 p-6 relative">
+                        <svg class="w-12 h-12 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.003 9.003 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                    </div>
+                    <div class="p-6 md:p-8 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <div class="flex gap-2">
+                                <span class="bg-brand-100 text-brand-700 text-xs font-bold px-2.5 py-1 rounded-md">퍼포먼스</span>
+                                <span class="bg-slate-200 text-slate-700 text-xs font-bold px-2.5 py-1 rounded-md">네이버광고</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">로컬 인프라 확장 연계 매칭 광고 캠페인</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">구글애즈 핵심 타겟 필터링 및 네이버 브랜드검색 연동을 조합하여, 예산 누수를 차단하고 유효 잠재고객 유입을 전월 대비 크게 견인한 통합 광고 기획안입니다.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="group bg-warm-50 rounded-[2rem] border border-brand-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center text-purple-400 p-6 relative">
+                        <svg class="w-12 h-12 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div class="p-6 md:p-8 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <div class="flex gap-2">
+                                <span class="bg-purple-100 text-purple-700 text-xs font-bold px-2.5 py-1 rounded-md">콘텐츠</span>
+                                <span class="bg-slate-200 text-slate-700 text-xs font-bold px-2.5 py-1 rounded-md">Adobe 기획</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">스토리텔링형 공익 모션 그래픽 비주얼 레이아웃</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">자연스러운 상징 메타포를 도입하여 수용자의 심리적 장벽을 낮춘 크리에이티브 시안입니다. 포토샵 및 애프터이펙트의 시각 연출 구조를 고려하여 제작되었습니다.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="group bg-warm-50 rounded-[2rem] border border-brand-100 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="h-48 bg-gradient-to-br from-pink-100 to-brand-100 flex items-center justify-center text-pink-400 p-6 relative">
+                        <svg class="w-12 h-12 stroke-[1.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    </div>
+                    <div class="p-6 md:p-8 flex-grow flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <div class="flex gap-2">
+                                <span class="bg-pink-100 text-pink-700 text-xs font-bold px-2.5 py-1 rounded-md">문서기획</span>
+                                <span class="bg-slate-200 text-slate-700 text-xs font-bold px-2.5 py-1 rounded-md">제안서</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-brand-600 transition-colors">데이터 지배력 기반 마케팅 종합 제안 마일스톤</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">시장의 트렌드 데이터와 자사의 핵심 강점을 일목요연하게 계량화하여 일반 오피스 양식 및 피치덱 서식으로 구조화시킨 고득점 제안 기획서 라인업입니다.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-brand-900 text-white relative overflow-hidden reveal">
+        <div class="absolute inset-0 pointer-events-none opacity-10">
+            <div class="absolute -bottom-20 -right-20 w-80 h-80 bg-white rounded-full filter blur-3xl"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
+            <h2 class="font-display text-4xl font-extrabold text-white">Let's Create Synergy</h2>
+            <p class="text-brand-200 text-lg max-w-xl mx-auto font-light">
+                준비된 비즈니스 통찰력과 실행력으로 기업의 여정에 성장의 발자국을 남기겠습니다. 소중한 채용 제안 및 협업 논의를 기다립니다.
+            </p>
+            <div class="p-6 bg-brand-800/50 backdrop-blur-sm border border-brand-700 rounded-3xl inline-block text-left space-y-3">
+                <p class="flex items-center gap-3 text-brand-100"><span class="font-bold text-white">Email:</span> im_ayoung@example.com</p>
+                <p class="flex items-center gap-3 text-brand-100"><span class="font-bold text-white">Location:</span> 인천광역시 (인프라 연계 및 로컬 마케팅 가능)</p>
+            </div>
+            <div>
+                <a href="mailto:im_ayoung@example.com" class="inline-flex items-center bg-white hover:bg-brand-100 text-brand-900 font-bold px-8 py-4 rounded-2xl shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    이메일로 메시지 보내기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto px-6 text-center space-y-3">
+            <p class="font-display text-lg font-bold text-slate-400">IM A-YOUNG</p>
+            <p class="text-sm">&copy; 2026 Im A-young. All rights reserved.</p>
+            <p class="text-xs text-slate-700">본 포트폴리오는 웹 기획 및 검색 최적화(SEO) 표준 구조에 따라 시맨틱 마크업으로 설계되었습니다.</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-6 py-3 rounded-2xl shadow-2xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 z-[9999] flex items-center gap-2 font-medium">
+        <span class="text-brand-400">●</span> <span id="toast-msg"></span>
+    </div>
+
+    <script>
+        // 1. 인트로 프리로더 타이핑 액션 코드
+        const introWords = ["Data-Driven.", "Creative Design.", "Im A-Young."];
+        let wordIdx = 0, charIdx = 0, isDeleting = false;
+        const typedTarget = document.getElementById('typed-text');
+
+        function typeLogics() {
+            let current = introWords[wordIdx];
+            if (isDeleting) {
+                typedTarget.textContent = current.substring(0, charIdx - 1);
+                charIdx--;
+            } else {
+                typedTarget.textContent = current.substring(0, charIdx + 1);
+                charIdx++;
+            }
+
+            if (!isDeleting && charIdx === current.length) {
+                isDeleting = true;
+                setTimeout(typeLogics, 800);
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                wordIdx++;
+                if (wordIdx === introWords.length) {
+                    // 타이핑이 끝나면 프리로더 부드럽게 퇴장
+                    setTimeout(() => {
+                        const loader = document.getElementById('preloader');
+                        loader.style.opacity = '0';
+                        loader.style.transition = 'opacity 0.6s ease';
+                        setTimeout(() => {
+                            loader.style.display = 'none';
+                            // 히어로 섹션 서서히 등장하는 스타트 액션 트리거
+                            document.getElementById('hero-text-container').classList.remove('opacity-0', 'translate-y-8');
+                            document.getElementById('hero-img-container').classList.remove('opacity-0', 'scale-95');
+                        }, 600);
+                    }, 200);
+                    return;
+                }
+                setTimeout(typeLogics, 200);
+            } else {
+                setTimeout(typeLogics, isDeleting ? 40 : 80);
+            }
+        }
+        window.addEventListener('DOMContentLoaded', typeLogics);
+
+        // 2. 모바일 메뉴 토글 내비게이터
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // 3. 지능형 성과지표 ROI 계산식 및 수치 포맷팅 함수
+        const budgetRange = document.getElementById('budget-range');
+        const budgetValue = document.getElementById('budget-value');
+        const cpcSelect = document.getElementById('cpc-select');
+        const cvrSelect = document.getElementById('cvr-select');
+
+        const resClicks = document.getElementById('res-clicks');
+        const resConversions = document.getElementById('res-conversions');
+
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\n))/g, ",");
+        }
+
+        function calculateROI() {
+            const budget = parseInt(budgetRange.value);
+            const cpc = parseInt(cpcSelect.value);
+            const cvr = parseFloat(cvrSelect.value);
+
+            budgetValue.textContent = formatNumber(budget) + "원";
+
+            const clicks = Math.floor(budget / cpc);
+            const conversions = Math.floor(clicks * cvr);
+
+            resClicks.textContent = formatNumber(clicks) + "회";
+            resConversions.textContent = formatNumber(conversions) + "건";
+        }
+
+        budgetRange.addEventListener('input', calculateROI);
+        cpcSelect.addEventListener('change', calculateROI);
+        cvrSelect.addEventListener('change', calculateROI);
+        calculateROI(); // 초기 구동
+
+        // 4. 알림 토스트 마이크로 인터랙션
+        function showReportToast() {
+            const clicks = resClicks.textContent;
+            const convs = resConversions.textContent;
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').textContent = `분석 완료: 유입 ${clicks} 중 약 ${convs}의 최적화 전환 배치가 예상됩니다.`;
+            
+            toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+            }, 4000);
+        }
+
+        // 5. 스크롤 인터랙션 (Intersection Observer) 및 상단 메뉴 스크롤스파이
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        sections.forEach(sec => revealObserver.observe(sec));
+
+        window.addEventListener('scroll', () => {
+            let currentSec = "";
+            sections.forEach(sec => {
+                const secTop = sec.offsetTop;
+                if (pageYOffset >= secTop - 120) {
+                    currentSec = sec.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-brand-600', 'font-bold');
+                // 기존 활성화 바 디자인 초기화 대체
+                link.style.borderBottom = 'none';
+                if (link.getAttribute('href') === `#${currentSec}`) {
+                    link.classList.add('text-brand-600', 'font-bold');
+                    link.style.borderBottom = '2px solid #8b5cf6';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
